@@ -25,4 +25,9 @@ public class CompleteCalc extends Calculator{
     public void showInfo(){
         System.out.println("Cal 인터페이스를 구현하였습니다.");
     }
+
+    @Override
+    public void description() {
+        super.description();// 부모 디폴트 메서드를 사용하지 않을꺼면 super 지우면 된다.
+    }
 }
