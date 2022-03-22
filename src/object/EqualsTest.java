@@ -24,6 +24,15 @@ class Student{
         }
         return false;
     }
+
+    /**
+     * hashCode()를 재정의할 때 학번을 반환하는것이 가장 합리적이다.
+     * @return
+     */
+    @Override
+    public int hashCode() {
+        return studentId;
+    }
 }
 
 
@@ -59,7 +68,6 @@ public class EqualsTest {
         else{
             System.out.println("studentLee와 park 동일하지 않습니다.");
         }
-
     }
 
 }
