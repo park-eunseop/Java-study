@@ -1,6 +1,6 @@
 package hashset;
 
-public class Member {
+public class Member implements Comparable<Member> {
 
     private int memberId;
     private String memberName;
@@ -51,5 +51,14 @@ public class Member {
         }
 
         return false;
+    }
+
+
+    @Override
+    public int compareTo(Member member) {
+        //return (this.memberId - member.memberId) * -1;  회원 아이디 순
+        //return member.memberName.compareTo(this.memberName);  // 이름 역 순
+        return this.memberName.compareTo(member.memberName);  // 이름 순
+        //K L P
     }
 }
